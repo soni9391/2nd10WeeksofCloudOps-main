@@ -22,7 +22,6 @@ spec:
         env:   # <-- Fixed indentation
         - name: REACT_APP_API_BASE_URL
           value: "http://a8e6ec1e052554f5282609cd7923ef03-1657894649.us-east-1.elb.amazonaws.com"
-
 ---
 apiVersion: v1
 kind: Service
