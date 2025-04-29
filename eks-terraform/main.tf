@@ -36,7 +36,7 @@ provider "aws" {
   }
 
   resource "aws_iam_role" "worker" {
-    name = "veera-eks-worker-1"
+    name = "veera-eks-worker1"
 
     assume_role_policy = jsonencode({
       "Version": "2012-10-17",
@@ -104,7 +104,7 @@ provider "aws" {
     role       = aws_iam_role.worker.name
   }
 
-  resource "aws_iam_instance_profile" "worker-1" {
+  resource "aws_iam_instance_profile" "worker" {
     depends_on = [aws_iam_role.worker]
     name       = "veera-eks-worker-new-profile1"
     role       = aws_iam_role.worker.name
